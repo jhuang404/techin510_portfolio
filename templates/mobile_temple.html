@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Temple - Jialu Huang</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="navbar">
+      <div class="nav-left">Jialu Huang</div>
+      <nav class="nav-right">
+        <a href="/">Works</a>
+        <a href="/about">About</a>
+        <a href="mailto:your@email.com" class="email-icon" title="Email">
+          <span>✉️</span>
+        </a>
+      </nav>
+    </header>
+    <main>
+      <h1>Mobile Temple</h1>
+      <div class="work-meta">2023.8-2023.11</div>
+      <div class="work-desc">Ideation / IOT product / UX UI Design.</div>
+      <img src="{{ url_for('static', filename='images/mobile_temple_1.png') }}" alt="Mobile Temple" class="work-img" style="margin:32px 0;">
+    </main>
+  </div>
+</body>
+</html> 

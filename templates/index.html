@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jialu Huang 作品集</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="navbar">
+      <div class="nav-left">Jialu Huang</div>
+      <nav class="nav-right">
+        <a href="#works">Works</a>
+        <a href="/about">About</a>
+        <a href="mailto:jhuang95@uw.edu" class="email-icon" title="Email">
+          <span>✉️</span>
+        </a>
+      </nav>
+    </header>
+    <main>
+      <section class="intro">
+        <h1>Hi! I'm <b>Jialu.</b></h1>
+        <p class="desc">A multidisciplinary product designer studying at University of Washington @MSTI.<br>
+        I look at problems from a technical, design, and product lens, building inclusive and empowering solutions.</p>
+        <div class="cta-row">
+          <a href="#works" class="cta-btn">See my works</a>
+          <span class="arrow">↓</span>
+        </div>
+      </section>
+      <hr>
+      <section id="works" class="works-preview">
+        <a href="/mobile-temple" class="work-card" style="text-decoration:none;">
+          <!-- Updated image path to use url_for -->
+          <img src="{{ url_for('static', filename='images/mobile_temple_cover.png') }}" alt="Mobile Temple" class="work-img">
+          <div class="work-info">
+            <div class="work-title">Mobile Temple</div>
+            <div class="work-meta">2023.8-2023.11</div>
+            <div class="work-desc">Ideation / IOT product / UX UI Design.</div>
+          </div>
+        </a>
+        <!-- 可添加更多作品卡片 -->
+      </section>
+    </main>
+  </div>
+</body>
+</html>

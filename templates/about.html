@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Jialu Huang</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Additional styles for the about page */
+    .about-grid {
+      display: flex;
+      gap: 40px;
+      margin-top: 32px;
+    }
+    
+    .about-photo {
+      flex: 0 0 320px;
+    }
+    
+    .profile-img {
+      width: 100%;
+      border-radius: 8px;
+      border: 2px solid #bdbdbd;
+    }
+    
+    .about-info {
+      flex: 1;
+    }
+    
+    .about-info h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+    
+    .about-info p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    
+    .contact-links {
+      margin-top: 8px;
+    }
+    
+    .contact-links a {
+      color: #222;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .contact-links a:hover {
+      color: #b2c800;
+    }
+
+    /* CV Section Styling */
+    .cv-section {
+      margin-top: 48px;
+      border-top: 2px solid #bdbdbd;
+      padding-top: 32px;
+    }
+    
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+      border-bottom: 3px solid #222;
+      display: inline-block;
+      padding-bottom: 3px;
+    }
+    
+    .education-item, .skills-item {
+      margin-bottom: 28px;
+    }
+    
+    .school-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+    }
+    
+    .degree {
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    
+    .education-meta {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    
+    .coursework {
+      margin-top: 8px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    
+    /* Updated skill label to match the "See my works" button */
+    .skill-category {
+      display: inline-block;
+      background: #fff;
+      border: 3px solid #222;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-family: inherit;
+      font-weight: 700;
+      padding: 6px 16px;
+      box-shadow: 3px 4px 0 #222;
+      color: #222;
+      margin-right: 16px;
+      margin-bottom: 10px;
+    }
+    
+    .bullet-point {
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .bullet-point .skill-details {
+      margin-top: 12px;
+      line-height: 1.6;
+    }
+    
+    @media (max-width: 800px) {
+      .about-grid {
+        flex-direction: column;
+      }
+      
+      .about-photo {
+        flex: 0 0 auto;
+        max-width: 280px;
+        margin: 0 auto;
+      }
+      
+      .education-meta {
+        flex-direction: column;
+      }
+      
+      .education-meta .location {
+        margin-top: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="navbar">
+      <div class="nav-left">Jialu Huang</div>
+      <nav class="nav-right">
+        <a href="/">Works</a>
+        <a href="/about">About</a>
+        <a href="mailto:jhuang95@uw.edu" class="email-icon" title="Email">
+          <span>✉️</span>
+        </a>
+      </nav>
+    </header>
+    <main>
+      <section class="about-section">
+        <div class="about-grid">
+          <div class="about-photo">
+            <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Jialu Huang" class="profile-img">
+          </div>
+          <div class="about-info">
+            <h2>About Me</h2>
+            <p>
+              Hi! I'm a product designer currently pursuing my Master's degree at the University of Washington studying ux design
+              and IOT product design. I also have a background in industrial design and installation art, which helps me bring a multidisciplinary approach to creating meaningful, user-centered experiences.
+            </p>
+            <div class="arrow" style="margin: 18px 0;">&#8595;</div>
+            <h3 style="margin-top: 32px;">Get in touch</h3>
+            <div class="contact-links">
+              <a href="mailto:jhuang95@uw.edu">EMAIL: jhuang95@uw.edu</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- CV Section -->
+      <section class="cv-section">
+        <div class="section-title">EDUCATION</div>
+        
+        <div class="education-item">
+          <div class="school-name">University of Washington</div>
+          <div class="degree">MS. in Technology Innovation</div>
+          <div class="education-meta">
+            <div class="date">Sep. 2024 – Aug. 2026 (expected)</div>
+            <div class="location">Seattle, WA</div>
+          </div>
+          <!-- Removed coursework bullet point for UW -->
+        </div>
+        
+        <div class="education-item">
+          <div class="school-name">China Academy of Art</div>
+          <div class="degree">BA. in Art and Technology</div>
+          <div class="education-meta">
+            <div class="date">Sep. 2020 – Jul. 2024</div>
+            <div class="location">Hangzhou, China</div>
+          </div>
+          <div class="coursework">
+            <div class="bullet-point">
+              <span class="dot">●</span>
+              <span>GPA:3.9/5, second-class scholarship</span>
+            </div>
+            <!-- Removed coursework bullet point for CAA -->
+          </div>
+        </div>
+        
+        <div class="section-title" style="margin-top: 36px;">SKILLS</div>
+        
+        <div class="skills-item">
+          <div class="bullet-point">
+            <span class="skill-category">Design</span>
+            <span class="skill-details">User research, Prototyping, Wireframing, Storyboarding, Journey mapping, Usability Testing, Interaction Design</span>
+          </div>
+          <div class="bullet-point">
+            <span class="skill-category">2D&3D Design Tools</span>
+            <span class="skill-details">Illustrator, Figma, InDesign, Blender, Keyshot, Rhino& grasshopper</span>
+          </div>
+          <div class="bullet-point">
+            <span class="skill-category">Coding& Physical Computing</span>
+            <span class="skill-details">HTML, CSS, JavaScript (basic), p5.js, Esp32, Arduino, PCB design, BLE communication</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

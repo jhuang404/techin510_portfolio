@@ -1,0 +1,283 @@
+body {
+  /* Added gradient background */
+  background: linear-gradient(to bottom, #b1c8005b 0%, #f6fbe7 70%);
+  font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  /* Made background semi-transparent */
+  background: rgba(255, 255, 245, 0.85);
+  border: 2px solid #b2c800;
+  box-shadow: 4px 6px 0 #d6d6c2;
+  padding: 32px 40px 40px 40px;
+  min-height: 80vh;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #bdbdbd;
+  padding-bottom: 8px;
+  margin-bottom: 32px;
+}
+
+.nav-left {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  color: #888;
+}
+
+.nav-right a {
+  color: #222;
+  text-decoration: underline;
+  margin-left: 32px;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.nav-right a:hover {
+  color: #b2c800;
+}
+
+.email-icon span {
+  font-size: 1.2rem;
+}
+
+.intro {
+  margin-bottom: 32px;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+  letter-spacing: 1px;
+}
+
+.intro .desc {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+
+.cta-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.cta-btn {
+  background: #fff;
+  border: 3px solid #222;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  font-family: inherit;
+  font-weight: 700;
+  padding: 12px 28px;
+  box-shadow: 3px 4px 0 #222;
+  color: #222;
+  text-decoration: none;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+
+.cta-btn:hover {
+  background: #f6fbe7;
+  box-shadow: 1px 2px 0 #b2c800;
+  color: #b2c800;
+}
+
+.arrow {
+  font-size: 2.2rem;
+  color: #d6d600;
+  margin-left: 8px;
+  user-select: none;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #bdbdbd;
+  margin: 36px 0 24px 0;
+}
+
+.works-preview {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.work-card {
+  background: #fff;
+  border: 2px solid #222;
+  border-radius: 8px;
+  box-shadow: 2px 3px 0 #bdbdbd;
+  width: 260px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, background 0.2s, border 0.2s;
+  cursor: pointer;
+}
+
+.work-card:hover {
+  background: #f6fbe7;
+  box-shadow: 3px 4px 0 #b2c800;
+  border: 3px solid #222;
+}
+
+.work-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.work-meta {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.work-desc {
+  font-size: 0.98rem;
+  color: #444;
+}
+
+/* Fixed hover styles to only change text color on hover */
+.work-card:hover .work-title {
+  color: #b2c800;
+}
+
+.work-card:hover .work-meta {
+  color: #888;
+}
+
+.work-card:hover .work-desc {
+  color: #444;
+}
+
+.work-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  background: #eee;
+}
+
+.work-info {
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 10px 4vw;
+  }
+  .works-preview {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .work-card {
+    width: 100%;
+  }
+  .intro h1 {
+    font-size: 2rem;
+  }
+}
+/* CV Section Styling - Add to your style.css file if you prefer */
+.cv-section {
+  margin-top: 48px;
+  border-top: 2px solid #bdbdbd;
+  padding-top: 32px;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #222;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+
+.education-item, .skills-item {
+  margin-bottom: 28px;
+}
+
+.school-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.degree {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.education-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.coursework {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.skill-category {
+  display: inline-block;
+  background: #fff;
+  border: 3px solid #222;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-family: inherit;
+  font-weight: 700;
+  padding: 6px 16px;
+  box-shadow: 3px 4px 0 #222;
+  color: #222;
+  margin-right: 16px;
+  margin-bottom: 10px;
+}
+
+.bullet-point {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.bullet-point .dot {
+  margin-right: 10px;
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+
+.bullet-point .skill-details {
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  .education-meta {
+    flex-direction: column;
+  }
+  
+  .education-meta .location {
+    margin-top: 4px;
+  }
+}
